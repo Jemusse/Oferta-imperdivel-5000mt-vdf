@@ -3,50 +3,113 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Potex.G</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bônus de Boas-Vindas</title>
   <style>
-    body, html {
+    body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      height: 100vh;
-      overflow: hidden;
-    }
-    #timer {
-      background-color: #222;
-      color: #fff;
+      background-color: #000;
+      color: white;
       text-align: center;
-      padding: 12px;
-      font-size: 22px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
     }
-    iframe {
-      width: 100%;
-      height: calc(100% - 50px);
-      border: none;
-      margin-top: 50px;
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      color: red;
+      font-size: 28px;
+      margin: 10px 0 5px;
+    }
+
+    h2 {
+      color: gold;
+      font-size: 36px;
+      margin: 0 0 15px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px auto;
+      max-width: 300px;
+    }
+
+    .bonus-box {
+      background-color: #111;
+      border: 2px solid red;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 0 15px red;
+    }
+
+    .bonus-box span {
+      color: gold;
+      font-weight: bold;
+    }
+
+    .btn-criar {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 15px 30px;
+      background: red;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 0 15px red;
+    }
+
+    .btn-criar::before {
+      content: "🔥 ";
+    }
+
+    .whatsapp-share {
+      background-color: #075E54;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 30px;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px #25D366;
+    }
+
+    .whatsapp-share a {
+      color: #b3e6b3;
+      text-decoration: none;
+    }
+
+    .whatsapp-share::before {
+      content: "💬 ";
     }
   </style>
 </head>
 <body>
-  <div id="timer">00:00:00</div>
-  <iframe src="https://is.gd/hHdRiZ"></iframe>
 
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const hrs = String(now.getHours()).padStart(2, '0');
-      const mins = String(now.getMinutes()).padStart(2, '0');
-      const secs = String(now.getSeconds()).padStart(2, '0');
-      document.getElementById('timer').innerText = `🕒 ${hrs}:${mins}:${secs}`;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
+  <div class="container">
+    <h1>🎉 GANHA ATÉ</h1>
+    <h2>5.000 MT!</h2>
+    <p>No teu primeiro depósito 📲</p>
+
+    <div class="bonus-box">
+      <p>Crie já a sua conta, deposite a partir de <span>100 MT</span> e receba automaticamente o seu <b>BÔNUS DE BOAS-VINDAS!</b></p>
+    </div>
+
+    <a class="btn-criar" href="https://tracking.olabet.co.mz/C.ashx?btag=a_1548b_7c_&affid=1506&siteid=1548&adid=7&c" target="_blank">CRIAR CONTA AGORA</a>
+
+    <div class="whatsapp-share">
+      📱 Convida amigos e GANHA juntos!<br/>
+      🔗 Já partilharam: 83%
+    </div>
+  </div>
+
 </body>
 </html>
