@@ -2,114 +2,119 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bônus de Boas-Vindas</title>
+  <meta charset="UTF-8">
+  <title>Ganha até 5.000 MT!</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
       background-color: #000;
       color: white;
+      font-family: Arial, sans-serif;
       text-align: center;
-    }
-
-    .container {
-      padding: 20px;
+      padding: 30px 15px;
     }
 
     h1 {
+      font-size: 30px;
       color: red;
-      font-size: 28px;
-      margin: 10px 0 5px;
     }
 
     h2 {
+      font-size: 26px;
       color: gold;
-      font-size: 36px;
-      margin: 0 0 15px;
     }
 
-    p {
-      font-size: 16px;
-      margin: 10px auto;
-      max-width: 300px;
-    }
-
-    .bonus-box {
-      background-color: #111;
+    .info-box {
+      background-color: #1a1a1a;
       border: 2px solid red;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 20px auto;
-      width: 90%;
-      max-width: 350px;
-      box-shadow: 0 0 15px red;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 18px;
+      color: white;
     }
 
-    .bonus-box span {
+    .highlight {
       color: gold;
       font-weight: bold;
     }
 
     .btn-criar {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 15px 30px;
       background: red;
+      border: none;
       color: white;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold;
-      text-decoration: none;
+      padding: 20px 40px;
+      margin-top: 20px;
       border-radius: 30px;
-      box-shadow: 0 0 15px red;
+      cursor: pointer;
+      box-shadow: 0 0 10px red;
+      animation: pulse 1.5s infinite;
     }
 
-    .btn-criar::before {
-      content: "🔥 ";
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px red;
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px red;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px red;
+      }
     }
 
-    .whatsapp-share {
-      background-color: #075E54;
+    .btn-share {
+      background-color: #25D366;
       color: white;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 30px;
-      max-width: 320px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 18px 35px;
+      margin-top: 60px;
+      border-radius: 30px;
+      display: inline-block;
+      text-decoration: none;
       box-shadow: 0 0 15px #25D366;
     }
 
-    .whatsapp-share a {
-      color: #b3e6b3;
-      text-decoration: none;
-    }
-
-    .whatsapp-share::before {
-      content: "💬 ";
+    .btn-share span {
+      display: block;
+      font-size: 16px;
+      color: #cfcfcf;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>🎉 GANHA ATÉ</h1>
-    <h2>5.000 MT!</h2>
-    <p>No teu primeiro depósito 📲</p>
+  <h1>🎉 GANHA ATÉ</h1>
+  <h2>5.000 MT!</h2>
+  <p>No teu primeiro depósito 📲</p>
 
-    <div class="bonus-box">
-      <p>Crie já a sua conta, deposite a partir de <span>100 MT</span> e receba automaticamente o seu <b>BÔNUS DE BOAS-VINDAS!</b></p>
-    </div>
-
-    <a class="btn-criar" href="https://tracking.olabet.co.mz/C.ashx?btag=a_1548b_7c_&affid=1506&siteid=1548&adid=7&c" target="_blank">CRIAR CONTA AGORA</a>
-
-    <div class="whatsapp-share">
-      📱 Convida amigos e GANHA juntos!<br/>
-      🔗 Já partilharam: 83%
-    </div>
+  <div class="info-box">
+    Crie já a sua conta na <span class="highlight">Olábet</span>, deposite a partir de 
+    <span class="highlight">100 MT</span> 
+    e receba automaticamente o seu 
+    <strong>BÔNUS DE BOAS-VINDAS!</strong>
   </div>
+
+  <!-- Botão Criar Conta -->
+  <a href="https://tracking.olabet.co.mz/C.ashx?btag=a_1548b_7c_&affid=1506&siteid=1548&adid=7&c" target="_blank">
+    <button class="btn-criar">🔥 CRIAR CONTA AGORA</button>
+  </a>
+
+  <!-- Botão de Partilha WhatsApp -->
+  <a 
+    class="btn-share"
+    href="https://wa.me/?text=Entra%20na%20promoção%20Olábet%20e%20ganha%20até%205000MT%20no%20registro!%20Link%3A%20https%3A%2F%2Ftracking.olabet.co.mz%2FC.ashx%3Fbtag%3Da_1548b_7c_%26affid%3D1506%26siteid%3D1548%26adid%3D7%26c"
+    target="_blank"
+  >
+    💬 Convida amigos e GANHA juntos!
+    <span>🔗 Já partilharam: 83%</span>
+  </a>
 
 </body>
 </html>
