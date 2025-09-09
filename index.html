@@ -1,180 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pré-Cadastro - TxunaBet</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TxunaPlay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #111;
+      text-align: center;
+    }
 
-  /* Tela de pré-cadastro */
-  #pre-cadastro {
-    text-align: center;
-    max-width: 500px;
-    padding: 20px;
-  }
+    header {
+      background: #0f0;
+      color: #000;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+    }
 
-  #pre-cadastro h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: gold;
-  }
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
 
-  #pre-cadastro p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
+    .slides {
+      display: none;
+    }
 
-  .btn-continuar {
-    background-color: red;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 15px red;
-    transition: 0.3s;
-  }
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
 
-  .btn-continuar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px red;
-  }
+    /* Galeria */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
 
-  /* Conteúdo principal oculto inicialmente */
-  #conteudo-principal {
-    display: none;
-    text-align: center;
-    padding: 20px;
-  }
+    .card {
+      background: #f8f8f8;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
 
-  h1 {
-    font-size: 32px;
-    color: red;
-    margin: 0;
-  }
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-  h2 {
-    font-size: 28px;
-    color: gold;
-    margin-top: 5px;
-  }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
 
-  p {
-    margin: 5px 0 20px;
-    font-size: 18px;
-  }
+    .card-content {
+      padding: 15px;
+    }
 
-  .info-box {
-    background-color: #1a1a1a;
-    border: 2px solid red;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 15px;
-    font-size: 17px;
-    line-height: 1.4;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .card-content h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
 
-  .highlight {
-    color: gold;
-    font-weight: bold;
-  }
+    .btn {
+      display: inline-block;
+      background: #00cc44;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
 
-  .btn-criar {
-    background: red;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 18px 35px;
-    margin: 30px auto 10px;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 0 10px red;
-    animation: pulse 1.5s infinite;
-    display: block;
-    max-width: 300px;
-    text-decoration: none;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 10px red; }
-    50% { transform: scale(1.05); box-shadow: 0 0 25px red; }
-    100% { transform: scale(1); box-shadow: 0 0 10px red; }
-  }
-
-  .btn-share {
-    background-color: #25D366;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 16px 30px;
-    margin: 20px auto 0;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 0 15px #25D366;
-    display: inline-block;
-    max-width: 90%;
-  }
-
-  .btn-share span {
-    display: block;
-    font-size: 14px;
-    color: #cfcfcf;
-    margin-top: 5px;
-  }
-</style>
+    .btn:hover {
+      background: #009933;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Pré-cadastro -->
-<div id="pre-cadastro">
-  <h1>⚠️ Aviso Importante</h1>
-  <p>Essa nova casa aceita apenas pessoas com BI e maiores de +18 anos.</p>
-  <p>Caso não tenha BI, pode usar outros números à sua escolha.</p>
-  <button class="btn-continuar" onclick="entrarSite()">Continuar</button>
-</div>
+  <header>🌟 TxunaPlay 🌟</header>
 
-<!-- Conteúdo principal -->
-<div id="conteudo-principal">
-  <h1>🎉 GANHA ATÉ</h1>
-  <h2>5.000 MT!</h2>
-  <p>No teu primeiro cadastro 📲</p>
-
-  <div class="info-box">
-    Crie já a sua conta na <span class="highlight">TxunaBet Moçambique</span>.  
-    <br><br>
-    ✅ A casa apresenta <strong>melhores jogos</strong> para ti!  
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slides"><img src="img1.jpg" alt="Aviator"></div>
+    <div class="slides"><img src="img2.jpg" alt="Turbo Mines"></div>
+    <div class="slides"><img src="img3.jpg" alt="Seguro Txuna"></div>
   </div>
 
-  <a href="https://txunaplay.com/t28b2ac77" class="btn-criar">CRIAR CONTA AGORA</a>
+  <!-- Galeria -->
+  <section class="gallery">
+    <div class="card">
+      <img src="img1.jpg" alt="Aviator">
+      <div class="card-content">
+        <h3>Descubra o Turbo</h3>
+        <a href="https://txunaplay.com/tbf021a2d" class="btn">👉 Jogar Agora</a>
+      </div>
+    </div>
 
-  <a href="https://chat.whatsapp.com/FPc9jaUkFoKFnLS7bqzAKJ?mode=ac_t" class="btn-share">
-    Acessar no grupo da TxunaBet
-    <span>Entre no grupo e receba sinais diários!</span>
-  </a>
-</div>
+    <div class="card">
+      <img src="img2.jpg" alt="Turbo Mines">
+      <div class="card-content">
+        <h3>Ativa o Seguro</h3>
+        <a href="https://txunaplay.com/tbf021a2d" class="btn">👉 Entrar</a>
+      </div>
+    </div>
 
-<script>
-function entrarSite() {
-  document.getElementById("pre-cadastro").style.display = "none";
-  document.getElementById("conteudo-principal").style.display = "block";
-}
-</script>
+    <div class="card">
+      <img src="img3.jpg" alt="Seguro Txuna">
+      <div class="card-content">
+        <h3>Registra-se e Recebas</h3>
+        <a href="https://txunaplay.com/tbf021a2d" class="btn">👉 Registrar</a>
+      </div>
+    </div>
+  </section>
 
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // troca a cada 3s
+    }
+  </script>
 </body>
-</html>
+  </html>
