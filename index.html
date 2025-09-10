@@ -3,109 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TxunaPlay - Aviator e Cassino</title>
+  <title>Aviator Pró</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      background: #e60000;
+      background-color: #ffffff;
+      margin: 0;
       padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .slideshow {
-      position: relative;
-      max-width: 100%;
-      height: 300px;
-      margin: auto;
-      overflow: hidden;
-    }
-
-    .slides {
       display: flex;
-      width: 400%;
-      animation: slide 12s infinite;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
-
-    .slides img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-100%); }
-      50% { transform: translateX(-200%); }
-      75% { transform: translateX(-300%); }
-      100% { transform: translateX(0); }
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 150px;
+    .card {
+      border: 1px solid #ddd;
       border-radius: 10px;
-      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.2s;
     }
-
-    .buttons {
-      margin: 20px;
+    .card:hover {
+      transform: scale(1.05);
     }
-
-    .buttons a {
-      display: inline-block;
-      background: #e60000;
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card button {
+      background-color: #28a745;
       color: white;
-      padding: 12px 20px;
-      margin: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+      border: none;
+      padding: 10px 20px;
+      margin: 15px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
     }
-
-    .buttons a:hover {
-      background: #ff3333;
+    .card button:hover {
+      background-color: #218838;
     }
   </style>
 </head>
 <body>
-  <header>🎰 TxunaPlay - Descubra o Turbo 🚀</header>
 
-  <div class="slideshow">
-    <div class="slides">
-      <img src="https://images.unsplash.com/photo-1601342630538-5f8f5e4ec96e?auto=format&fit=crop&w=1200&q=80" alt="Aviator">
-      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" alt="Cassino">
-      <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?auto=format&fit=crop&w=1200&q=80" alt="Fichas de Aposta">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=1200&q=80" alt="Dinheiro">
-    </div>
+  <!-- Card 1 -->
+  <div class="card">
+    <img src="<<ImageDisplayed1>>" alt="Aviator 1">
+    <button onclick="window.location.href='https://txunaplay.com/tbf021a2d'">Jogar Agora</button>
   </div>
 
-  <div class="buttons">
-    <a href="https://txunaplay.com/tbf021a2d">🔥 Descubra o Turbo</a>
-    <a href="https://txunaplay.com/tbf021a2d">🛡️ Ativa o Seguro</a>
-    <a href="https://txunaplay.com/tbf021a2d">📲 Registra-se e Receba</a>
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="<<ImageDisplayed2>>" alt="Aviator 2">
+    <button onclick="window.location.href='https://txunaplay.com/tbf021a2d'">Jogar Agora</button>
   </div>
 
-  <section class="gallery">
-    <img src="https://images.unsplash.com/photo-1601342630538-5f8f5e4ec96e?auto=format&fit=crop&w=800&q=80" alt="Aviator">
-    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Cassino">
-    <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?auto=format&fit=crop&w=800&q=80" alt="Fichas de aposta">
-    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=800&q=80" alt="Dinheiro">
-  </section>
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="<<ImageDisplayed3>>" alt="Aviator 3">
+    <button onclick="window.location.href='https://txunaplay.com/tbf021a2d'">Jogar Agora</button>
+  </div>
+
 </body>
-  </html>
+</html>
