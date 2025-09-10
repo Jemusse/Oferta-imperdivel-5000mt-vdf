@@ -3,87 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aviator Pró</title>
+  <title>Reivindicar Bônus</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #ffffff;
-      margin: 0;
-      padding: 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      width: 250px;
+
+    .container {
       text-align: center;
-      transition: transform 0.2s;
-      padding: 10px;
     }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-    }
+
     .message {
-      font-size: 16px;
-      margin: 10px 0;
+      font-size: 18px;
       color: #333;
+      margin-bottom: 15px;
     }
+
     .arrows {
       font-size: 24px;
       color: #ffcc00;
-      margin: 5px 0;
+      margin-bottom: 15px;
     }
-    .card button {
-      background-color: #ffcc00; /* amarelo vibrante */
+
+    .button {
+      background: linear-gradient(45deg, #ffcc00, #ffd633, #ffcc00);
       color: #000;
       border: none;
-      padding: 10px 20px;
-      margin-bottom: 15px;
-      border-radius: 5px;
+      padding: 15px 30px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
       font-weight: bold;
-      transition: background-color 0.2s;
+      animation: vibrate 0.3s infinite;
+      transition: transform 0.1s;
     }
-    .card button:hover {
-      background-color: #e6b800; /* amarelo mais escuro no hover */
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes vibrate {
+      0% { transform: translate(0px, 0px); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0px, 0px); }
     }
   </style>
 </head>
 <body>
-
-  <!-- Card 1 -->
-  <div class="card">
-    <img src="<<ImageDisplayed1>>" alt="Aviator 1">
-    <div class="message">Chuvas no seu primeiro registo de 1000 MTS clica no botão baixo</div>
-    <div class="arrows">⬇️⬇️⬇️</div>
-    <button onclick="window.location.href='https://txunaplay.com/tbf021a2d'">Ir Reivindicar</button>
+  <div class="container">
+    <div class="message">Chuvas no seu primeiro registo de 1000 MTS clica no botão abaixo</div>
+    <div class="arrows">V&nbsp;&nbsp;V&nbsp;&nbsp;V</div>
+    <button class="button" onclick="window.location.href='https://txunaplay.com/tbf021a2d'">Ir Reivindicar</button>
   </div>
-
-  <!-- Card 2 -->
-  <div class="card">
-    <img src="<<ImageDisplayed2>>" alt="Aviator 2">
-    <div class="message">Chuvas no seu primeiro registo de 1000 MTS clica no botão baixo</div>
-    <div class="arrows">⬇️⬇️⬇️</div>
-    <button onclick="window.location.href='https://txunaplay.com/tbf021a2d'">Ir Reivindicar</button>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="card">
-    <img src="<<ImageDisplayed3>>" alt="Aviator 3">
-    <div class="message">Chuvas no seu primeiro registo de 1000 MTS clica no botão baixo</div>
-    <div class="arrows">⬇️⬇️⬇️</div>
-    <button onclick="window.location.href='https://txunaplay.com/tbf021a2d'">Ir Reivindicar</button>
-  </div>
-
 </body>
-  </html>
+      </html>
