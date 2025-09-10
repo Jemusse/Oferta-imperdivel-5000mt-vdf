@@ -3,145 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TxunaPlay</title>
+  <title>TxunaPlay - Aviator e Cassino</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #111;
+      background: #111;
+      color: #fff;
       text-align: center;
     }
 
     header {
-      background: #0f0;
-      color: #000;
-      padding: 15px;
-      font-size: 22px;
+      background: #e60000;
+      padding: 20px;
+      font-size: 24px;
       font-weight: bold;
     }
 
-    /* Slideshow */
-    .slideshow-container {
+    .slideshow {
       position: relative;
       max-width: 100%;
+      height: 300px;
       margin: auto;
       overflow: hidden;
     }
 
     .slides {
-      display: none;
+      display: flex;
+      width: 400%;
+      animation: slide 12s infinite;
     }
 
     .slides img {
       width: 100%;
-      height: auto;
+      height: 300px;
+      object-fit: cover;
     }
 
-    /* Galeria */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
+    }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
       padding: 20px;
     }
 
-    .card {
-      background: #f8f8f8;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
+    .gallery img {
       width: 100%;
-      height: auto;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
-    .card-content {
-      padding: 15px;
+    .buttons {
+      margin: 20px;
     }
 
-    .card-content h3 {
-      margin: 10px 0;
-      font-size: 18px;
-      color: #333;
-    }
-
-    .btn {
+    .buttons a {
       display: inline-block;
-      background: #00cc44;
+      background: #e60000;
       color: white;
-      padding: 10px 20px;
-      margin-top: 10px;
+      padding: 12px 20px;
+      margin: 10px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: 0.3s;
     }
 
-    .btn:hover {
-      background: #009933;
+    .buttons a:hover {
+      background: #ff3333;
     }
   </style>
 </head>
 <body>
+  <header>🎰 TxunaPlay - Descubra o Turbo 🚀</header>
 
-  <header>🌟 TxunaPlay 🌟</header>
-
-  <!-- Slideshow -->
-  <div class="slideshow-container">
-    <div class="slides"><img src="https://images.unsplash.com/photo-1602297302379-1b23e3f9f3d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Aviator Game"></div>
-    <div class="slides"><img src="https://images.unsplash.com/photo-1620064573729-98c6460d7f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Casino Roulette"></div>
-    <div class="slides"><img src="https://images.unsplash.com/photo-1622495895640-9a19d1ba4f9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Money Win"></div>
+  <div class="slideshow">
+    <div class="slides">
+      <img src="https://images.unsplash.com/photo-1601342630538-5f8f5e4ec96e?auto=format&fit=crop&w=1200&q=80" alt="Aviator">
+      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" alt="Cassino">
+      <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?auto=format&fit=crop&w=1200&q=80" alt="Fichas de Aposta">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=1200&q=80" alt="Dinheiro">
+    </div>
   </div>
 
-  <!-- Galeria -->
+  <div class="buttons">
+    <a href="https://txunaplay.com/tbf021a2d">🔥 Descubra o Turbo</a>
+    <a href="https://txunaplay.com/tbf021a2d">🛡️ Ativa o Seguro</a>
+    <a href="https://txunaplay.com/tbf021a2d">📲 Registra-se e Receba</a>
+  </div>
+
   <section class="gallery">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1602297302379-1b23e3f9f3d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aviator Game">
-      <div class="card-content">
-        <h3>Descubra o Turbo</h3>
-        <a href="https://txunaplay.com/tbf021a2d" class="btn">👉 Jogar Agora</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1620064573729-98c6460d7f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Casino Roulette">
-      <div class="card-content">
-        <h3>Ativa o Seguro</h3>
-        <a href="https://txunaplay.com/tbf021a2d" class="btn">👉 Entrar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1622495895640-9a19d1ba4f9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Money Win">
-      <div class="card-content">
-        <h3>Registra-se e Recebas</h3>
-        <a href="https://txunaplay.com/tbf021a2d" class="btn">👉 Registrar</a>
-      </div>
-    </div>
+    <img src="https://images.unsplash.com/photo-1601342630538-5f8f5e4ec96e?auto=format&fit=crop&w=800&q=80" alt="Aviator">
+    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Cassino">
+    <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?auto=format&fit=crop&w=800&q=80" alt="Fichas de aposta">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=800&q=80" alt="Dinheiro">
   </section>
-
-  <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      let slides = document.getElementsByClassName("slides");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      slides[slideIndex-1].style.display = "block";  
-      setTimeout(showSlides, 3000); // troca a cada 3s
-    }
-  </script>
 </body>
-                          </html>
+  </html>
