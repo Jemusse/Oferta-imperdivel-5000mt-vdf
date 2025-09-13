@@ -10,29 +10,35 @@
       background: #fff;
       font-family: Arial, sans-serif;
       text-align: center;
+      padding: 10px;
     }
 
-    /* --- SLIDES --- */
+    /* --- QUADRO DO SLIDE --- */
     .slideshow-container {
       position: relative;
-      max-width: 100%;
-      height: 300px;
+      width: 100%;
+      max-width: 360px; /* largura máxima no telemóvel */
+      height: 220px; /* altura fixa */
       margin: auto;
       overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: #f9f9f9;
     }
 
     .slides {
       display: none;
       width: 100%;
-      height: 300px;
-      object-fit: cover;
+      height: 100%;
+      object-fit: cover; /* ajusta imagem dentro do quadro */
     }
 
     /* --- IMAGEM PRINCIPAL --- */
     .main-image {
       margin-top: 20px;
-      max-width: 100%;
-      border-radius: 8px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
 
     /* --- BOTÃO REGISTAR --- */
@@ -45,9 +51,10 @@
       font-size: 18px;
       font-weight: bold;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       text-decoration: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     .btn:hover {
       background-color: #0a7d0a;
@@ -75,9 +82,8 @@
     showSlides();
 
     function showSlides() {
-      let i;
       let slides = document.getElementsByClassName("slides");
-      for (i = 0; i < slides.length; i++) {
+      for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
       slideIndex++;
@@ -88,4 +94,4 @@
   </script>
 
 </body>
-</html>
+      </html>
