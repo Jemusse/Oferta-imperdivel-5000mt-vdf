@@ -3,78 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reivindicar Bônus</title>
+  <title>Slides + Imagem Principal</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #2ecc71, #27ae60, #1e8449);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-    }
-
-    .container {
+      background: #fff;
+      font-family: Arial, sans-serif;
       text-align: center;
-      max-width: 420px;
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     }
 
-    .container img {
+    /* --- SLIDES --- */
+    .slideshow-container {
+      position: relative;
       max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
+      height: 300px;
+      margin: auto;
+      overflow: hidden;
     }
 
-    .message {
-      font-size: 20px;
-      font-weight: 500;
-      color: #222;
-      margin-bottom: 25px;
+    .slides {
+      display: none;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
     }
 
-    .button {
-      background: linear-gradient(45deg, #2ecc71, #27ae60, #1e8449);
+    /* --- IMAGEM PRINCIPAL --- */
+    .main-image {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* --- BOTÃO REGISTAR --- */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background-color: green;
       color: #fff;
-      border: none;
-      padding: 15px 35px;
-      border-radius: 10px;
-      cursor: pointer;
       font-size: 18px;
       font-weight: bold;
-      animation: pulse 1.2s infinite;
-      box-shadow: 0 4px 12px rgba(46, 204, 113, 0.6);
-      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
     }
-
-    .button:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 16px rgba(46, 204, 113, 0.9);
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
+    .btn:hover {
+      background-color: #0a7d0a;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Imagem carregada do Postimages -->
-    <img src="https://i.postimg.cc/Fz97mt38/IMG-20250815-WA0042.jpg" alt="Aviator TxunaBet">
 
-    <div class="message">
-      🌧️ Chuvas no seu primeiro registo de 1000 MTS <br> Clica no botão abaixo:
-    </div>
-
-    <button class="button" onclick="window.location.href='https://txunaplay.com/tbf021a2d'">
-      Registar
-    </button>
+  <!-- SLIDES AUTOMÁTICOS -->
+  <div class="slideshow-container">
+    <img class="slides" src="https://i.postimg.cc/02q2TK73/IMG-20250906-WA0058.jpg">
+    <img class="slides" src="https://i.postimg.cc/jCVKKmWP/IMG-20250911-WA0031.jpg">
+    <img class="slides" src="https://i.postimg.cc/bY5w3Fvz/IMG-20250911-WA0030-1.jpg">
   </div>
+
+  <!-- IMAGEM PRINCIPAL -->
+  <div>
+    <img class="main-image" src="https://i.postimg.cc/Fz97mt38/IMG-20250815-WA0042.jpg" alt="Imagem Principal">
+    <br>
+    <a href="https://is.gd/hHdRiZ" class="btn">Registar</a>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000); // muda a cada 3 segundos
+    }
+  </script>
+
 </body>
 </html>
