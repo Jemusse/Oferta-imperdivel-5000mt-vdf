@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f8f8f8, #ffffff);
+      background: linear-gradient(135deg, #ffeb3b, #ff9800, #ffcc00);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,10 +18,10 @@
     .container {
       text-align: center;
       max-width: 400px;
-      background: #fff;
+      background: #ffffff;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     }
 
     .message {
@@ -32,22 +32,22 @@
     }
 
     .button {
-      background: linear-gradient(45deg, #ffcc00, #ffd633, #ffcc00);
+      background: linear-gradient(45deg, #ffcc00, #ffd633, #ffb300);
       color: #000;
       border: none;
       padding: 15px 35px;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 18px;
       font-weight: bold;
       animation: pulse 1.2s infinite;
-      box-shadow: 0 4px 10px rgba(255, 204, 0, 0.6);
-      transition: transform 0.2s;
+      box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 6px 15px rgba(255, 204, 0, 0.8);
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(255, 204, 0, 0.9);
     }
 
     @keyframes pulse {
