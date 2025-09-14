@@ -41,40 +41,40 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
 
-    /* --- BOTÃO REGISTAR COM EFEITO BRILHO --- */
+    /* --- BOTÃO REGISTAR VERDE --- */
     .btn {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background-color: #ffcc00;
-      color: #000;
-      font-size: 18px;
+      margin: 20px auto;
+      padding: 14px 28px;
+      background-color: #006400;
+      color: #fff;
+      font-size: 20px;
       font-weight: bold;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 0 15px #ffcc00, 0 0 30px #ffdd33, 0 0 45px #ffee66;
+      box-shadow: 0 0 15px #006400, 0 0 30px #00cc44;
       animation: glow 1.5s infinite alternate, pulse 1.5s infinite;
       transition: transform 0.3s, background-color 0.3s;
     }
 
     .btn:hover {
       transform: scale(1.15);
-      background-color: #ffd633;
-      box-shadow: 0 0 20px #ffcc00, 0 0 40px #ffdd33, 0 0 60px #ffee66;
+      background-color: #009933;
+      box-shadow: 0 0 25px #00e64d, 0 0 45px #00cc44;
     }
 
     /* --- ANIMAÇÕES --- */
     @keyframes pulse {
       0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.07); }
       100% { transform: scale(1); }
     }
 
     @keyframes glow {
-      0% { box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffdd33, 0 0 30px #ffee66; }
-      100% { box-shadow: 0 0 20px #ffcc00, 0 0 40px #ffdd33, 0 0 60px #ffee66; }
+      0% { box-shadow: 0 0 10px #006400, 0 0 20px #00cc44; }
+      100% { box-shadow: 0 0 25px #00e64d, 0 0 40px #00cc44; }
     }
   </style>
 </head>
@@ -87,11 +87,14 @@
     <img class="slides" src="https://i.postimg.cc/bY5w3Fvz/IMG-20250911-WA0030-1.jpg">
   </div>
 
+  <!-- BOTÃO NO MEIO -->
+  <div>
+    <a href="https://is.gd/hHdRiZ" class="btn">Registar</a>
+  </div>
+
   <!-- IMAGEM PRINCIPAL -->
   <div>
     <img class="main-image" src="https://i.postimg.cc/Fz97mt38/IMG-20250815-WA0042.jpg" alt="Imagem Principal">
-    <br>
-    <a href="https://is.gd/hHdRiZ" class="btn">Registar</a>
   </div>
 
   <script>
@@ -111,4 +114,4 @@
   </script>
 
 </body>
-</html>
+  </html>
